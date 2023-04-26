@@ -1,20 +1,20 @@
 -- Setup language servers.
 local lspconfig = require 'lspconfig'
-local configs = require 'lpsconfig.configs'
-if not configs.sap_cds_lsp then
-    configs.sap_cds_lsp = {
-        default_config = {
-            cmd = { 'cds-lsp', '--stdio' },
-            filetypes = { 'cds' },
-            root_dir = lspconfig.util.root_patterm('.git', 'package.json'),
-            settings = {}
-        }
-    }
-end
+--local configs = require 'lpsconfig.configs'
+--if not configs.sap_cds_lsp then
+--    configs.sap_cds_lsp = {
+--        default_config = {
+--            cmd = { 'cds-lsp', '--stdio' },
+--            filetypes = { 'cds' },
+--            root_dir = lspconfig.util.root_patterm('.git', 'package.json'),
+--            settings = {}
+--        }
+--    }
+--end
 
 
 lspconfig.clangd.setup {}
-lspconfig.sap_cds_lsp.setup {}
+--lspconfig.sap_cds_lsp.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
