@@ -15,19 +15,9 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
     pattern = { '*.cds' },
     command = 'set filetype=cds'
 })
---if not configs.sap_cds_lsp then
---    configs.sap_cds_lsp = {
---        default_config = {
---            cmd = { 'cds-lsp', '--stdio' },
---            filetypes = { 'cds' },
---            root_dir = lspconfig.util.root_patterm('.git', 'package.json'),
---            settings = {}
---        }
---    }
---end
-
 
 lspconfig.clangd.setup {}
+lspconfig.ols.setup {}
 lspconfig.sap_cds.setup {}
 
 -- Global mappings.
@@ -45,6 +35,22 @@ vim.api.nvim_create_autocmd('LspAttach', {
     -- Enable completion triggered by <c-x><c-o>
     vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
+    vim.api.nvim_create_autocmd('CursorHold', {
+        buffer = ev.buf,
+        callback = function()
+            local opts = {
+                focusable = false,
+                close_events = { "BufLeave", "CursorMoved", "InsertEnter", "FocusLost" },
+                border = 'rounded',
+                source = 'always',
+                prefix = ' ',
+                scope = 'cursor',
+            }
+            vim.diagnostic.open_float(nil, opts)
+        end
+    })
+
+
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     local opts = { buffer = ev.buf }
@@ -60,10 +66,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     end, opts)
     vim.keymap.set('n', '<Leader>D', vim.lsp.buf.type_definition, opts)
     vim.keymap.set('n', '<Leader>rn', vim.lsp.buf.rename, opts)
-    vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, opts)
+--    vim.keymap.set({ 'n', 'v' }, '<Leader>ca', vim.lsp.buf.code_action, opts)
     vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
---    vim.keymap.set('n', '<Leader>f', function()
---      vim.lsp.buf.format { async = true }
---    end, opts)
   end,
 })
