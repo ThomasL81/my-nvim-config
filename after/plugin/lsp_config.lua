@@ -16,9 +16,16 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
     command = 'set filetype=cds'
 })
 
-lspconfig.clangd.setup {}
-lspconfig.ols.setup {}
-lspconfig.sap_cds.setup {}
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+lspconfig.clangd.setup {
+    capabilities = capabilities
+}
+lspconfig.ols.setup {
+    capabilities = capabilities
+}
+lspconfig.sap_cds.setup {
+    capabilities = capabilities
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
