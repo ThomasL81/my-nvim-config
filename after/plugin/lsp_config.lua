@@ -19,6 +19,7 @@ vim.api.nvim_create_autocmd({ 'BufEnter', 'BufWinEnter' }, {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 lspconfig.clangd.setup {
     cmd = { 'clangd', '-header-insertion=never' },
+    filetypes = { 'c', 'h', 'cpp', 'hpp' },
     capabilities = capabilities
 }
 lspconfig.ols.setup {
