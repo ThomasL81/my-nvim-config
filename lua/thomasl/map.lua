@@ -10,6 +10,7 @@ vim.opt.autoindent=false
 vim.opt.smartindent=false
 vim.opt.cindent=true
 vim.opt.cinwords="if","else","while","do","for"
+vim.opt.cinoptions="l1"
 
 vim.opt.clipboard="unnamedplus"
 

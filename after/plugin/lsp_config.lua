@@ -28,6 +28,9 @@ lspconfig.ols.setup {
 lspconfig.sap_cds.setup {
     capabilities = capabilities
 }
+lspconfig.tsserver.setup {
+    capabilities = capabilities
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
