@@ -15,7 +15,7 @@ bufferline.setup{
 vim.keymap.set("n", "<c-[>", function() vim.cmd([[BufferLineCyclePrev]]) end)
 vim.keymap.set("n", "<c-]>", function() vim.cmd([[BufferLineCycleNext]]) end) 
 
-vim.keymap.set("n", "<c-q>", function() vim.cmd([[bdelete]]) end) 
+vim.keymap.set("n", "<c-e>", function() vim.cmd([[bdelete]]) end) 
 
 vim.keymap.set("n", "<c-f1>", function() vim.cmd([[BufferLineGoToBuffer 1]]) end) 
 vim.keymap.set("n", "<c-f2>", function() vim.cmd([[BufferLineGoToBuffer 2]]) end) 

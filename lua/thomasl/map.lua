@@ -1,6 +1,8 @@
 vim.opt.termguicolors=true
 vim.g.mapleader=' '
 
+vim.g.fileformat="unix"
+
 vim.opt.number=true
 vim.opt.relativenumber=true
 
@@ -42,6 +44,9 @@ vim.opt.backup = false
 vim.opt.undodir = vim.fn.stdpath('data') .. "/undodir"
 vim.opt.undofile = true
 
+vim.keymap.set("n", "j", "jzz")
+vim.keymap.set("n", "k", "kzz")
+vim.keymap.set("n", "G", "Gzz")
 vim.keymap.set("n", "<leader>pv", "<cmd>Explore<cr>") --function() vim.cmd([[Explore]]) end)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv") 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv") 
