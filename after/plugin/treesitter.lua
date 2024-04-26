@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "c", "cpp", "hlsl", "odin", "lua", "vim", "vimdoc", "query", "tsx", "typescript" },
+  ensure_installed = { "c", "cpp", "hlsl", "odin", "lua", "vim", "vimdoc", "query", "typescript" },
 
   highlight = {
     enable = true,
