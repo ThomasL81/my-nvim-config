@@ -40,7 +40,7 @@ lspconfig.sap_cds.setup {
 lspconfig.eslint.setup {
     capabilities = capabilities
 }
-lspconfig.tsserver.setup {
+lspconfig.ts_ls.setup {
     capabilities = capabilities
 }
 
