@@ -43,6 +43,9 @@ lspconfig.eslint.setup {
 lspconfig.ts_ls.setup {
     capabilities = capabilities
 }
+lspconfig.svelte.setup{
+    capabilities = capabilities
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -74,7 +77,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
             vim.diagnostic.open_float(nil, opts)
         end
     })
-
 
     -- Buffer local mappings.
     -- See `:help vim.lsp.*` for documentation on any of the below functions
