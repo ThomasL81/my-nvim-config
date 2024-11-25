@@ -2,6 +2,7 @@ vim.opt.termguicolors=true
 vim.g.mapleader=' '
 
 vim.g.fileformat="unix"
+vim.g.zig_fmt_autosave=0
 
 vim.opt.number=true
 vim.opt.relativenumber=true

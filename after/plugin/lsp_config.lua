@@ -46,6 +46,10 @@ lspconfig.ts_ls.setup {
 lspconfig.svelte.setup{
     capabilities = capabilities
 }
+lspconfig.zls.setup{
+    capabilities = capabilities
+}
+
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
