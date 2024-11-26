@@ -1,3 +1,2 @@
-require "thomasl"
-
-
+require 'settings'
+require 'plugins'
