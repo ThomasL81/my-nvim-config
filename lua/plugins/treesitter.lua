@@ -1,7 +1,12 @@
 -- bufferline.lua
 return {
   'nvim-treesitter/nvim-treesitter',
-  run = ':TSUpdate',
+  run = function()
+    if vim.fn.exists(':TSUpdate') == 2 then
+      vim.cmd(':TSUpdate')
+    end
+  end,
+ -- run = ':TSUpdate',
   config = function() 
     local ts = require('nvim-treesitter.configs')
     ts.setup{
