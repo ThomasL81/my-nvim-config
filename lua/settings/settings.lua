@@ -11,7 +11,7 @@ vim.opt.clipboard='unnamedplus'
 vim.opt.signcolumn='yes'
 vim.opt.scrolloff=15
 
-vim.opt.shiftwidth=2
+vim.opt.shiftwidth=4
 vim.opt.expandtab=true
 vim.opt.softtabstop=-1                    -- follow shiftwidth setting
 vim.opt.wrap=false
