@@ -1,7 +1,7 @@
 -- lsp_config.lua
 return {
   'neovim/nvim-lspconfig',
-  config = function() 
+  config = function()
     local lsp = require 'lspconfig'
 
     require('plugins.lsp_sap_cds').setup()
@@ -11,6 +11,7 @@ return {
     lsp.clangd.setup{ cmd = { 'clangd', '-header-insertion=never'}, }
     lsp.ols.setup{}
     lsp.eslint.setup{}
+    lsp.svelte.setup{}
     lsp.ts_ls.setup{}
 
     -- lsp_config.svelte.setup{}
