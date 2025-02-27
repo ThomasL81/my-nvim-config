@@ -10,7 +10,7 @@ return {
   config = function()
     local ts = require('nvim-treesitter.configs')
     ts.setup{
-      ensure_installed = { 'c', 'cpp', 'hlsl', 'odin', 'lua', 'vim', 'vimdoc', 'query', 'typescript', 'svelte' },
+      ensure_installed = { 'c', 'cpp', 'hlsl', 'odin', 'lua', 'vim', 'vimdoc', 'query', 'typescript', 'svelte', 'markdown' },
       highlight = { enable = true, },
       additional_vim_regex_highlighting  = false,
     }
