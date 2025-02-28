@@ -18,6 +18,17 @@ return {
                 adapter = "ollama",
             },
         },
+        adapters = {
+            ollama = function()
+                return require('codecompanion.adapters').extend('ollama', {
+                    schema = {
+                        model = {
+                            default = "deepseek-coder:33b"
+                        }
+                    }
+                })
+            end,
+        },
     })
 end
 }
