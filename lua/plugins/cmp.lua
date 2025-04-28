@@ -1,12 +1,12 @@
 return {
   'hrsh7th/nvim-cmp',
-  requires = { 
+  requires = {
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/cmp-buffer'},
     {'L3MON4D3/LuaSnip'},
     {'saadparwaiz1/cmp_luasnip'}
   },
-  config = function() 
+  config = function()
     local cmp = require'cmp'
 
     cmp.setup({
@@ -33,7 +33,7 @@ return {
       }, {
 	{ name = 'buffer' },
       })
-    }) 
+    })
   end
 }
 

@@ -20,8 +20,9 @@ return require('packer').startup(function(use)
   use(require('plugins.undotree'))
   use(require('plugins.treesitter'))
   use(require('plugins.telescope'))
-  use(require('plugins.lsp_config'))
   use(require('plugins.cmp'))
+  use(require('plugins.lsp_config'))
+  use(require('plugins.codecompanion'))
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

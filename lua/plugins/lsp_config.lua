@@ -3,16 +3,18 @@ return {
   'neovim/nvim-lspconfig',
   config = function()
     local lsp = require 'lspconfig'
+    local cmp = require 'cmp_nvim_lsp'
+    local default_capabilities = cmp.default_capabilities()
 
-    require('plugins.lsp_sap_cds').setup()
+    require('plugins.lsp_sap_cds').setup{ capabilities = default_capabilities }
 --    lsp.sap_cds = require('plugins.lsp_sap_cds')
 --    lsp.sap_cds.setup()
 
-    lsp.clangd.setup{ cmd = { 'clangd', '-header-insertion=never'}, }
-    lsp.ols.setup{}
-    lsp.eslint.setup{}
-    lsp.svelte.setup{}
-    lsp.ts_ls.setup{}
+    lsp.clangd.setup{ capabilities = default_capabilities, cmd = { 'clangd', '-header-insertion=never'}, }
+    lsp.ols.setup{capabilities = default_capabilities}
+    lsp.eslint.setup{capabilities = default_capabilities}
+    lsp.svelte.setup{capabilities = default_capabilities}
+    lsp.ts_ls.setup{capabilities = default_capabilities}
 
     -- lsp_config.svelte.setup{}
     -- lsp_config.zls.setup{}
