@@ -24,7 +24,7 @@ return {
       desc = "cds-typer: generate types to #cds-models",
       callback = function()
 	local file_name = vim.api.nvim_buf_get_name(0)
-	vim.cmd('! npx @cap-js/cds-typer '.. file_name .. ' --outputDirectory @cds-models --logLevel CRITICAL')
+	vim.cmd('! npx @cap-js/cds-typer '.. file_name .. ' --outputDirectory @cds-models --logLevel ERROR')
       end,
     })
 
