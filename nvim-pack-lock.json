@@ -1,0 +1,42 @@
+{
+  "plugins": {
+    "bufferline.nvim": {
+      "src": "https://github.com/akinsho/bufferline.nvim.git",
+      "version": "'master'"
+    },
+    "lualine.nvim": {
+      "rev": "b8c2315",
+      "src": "https://github.com/nvim-lualine/lualine.nvim.git",
+      "version": "'master'"
+    },
+    "neovim-ayu": {
+      "rev": "cc78e88",
+      "src": "https://github.com/Shatur/neovim-ayu.git"
+    },
+    "nvim-treesitter": {
+      "rev": "42fc28ba",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter.git",
+      "version": "'master'"
+    },
+    "nvim-web-devicons": {
+      "rev": "b8221e4",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons.git",
+      "version": "'master'"
+    },
+    "plenary.nvim": {
+      "rev": "b9fd522",
+      "src": "https://github.com/nvim-lua/plenary.nvim.git",
+      "version": "'master'"
+    },
+    "telescope.nvim": {
+      "rev": "b4da76b",
+      "src": "https://github.com/nvim-telescope/telescope.nvim.git",
+      "version": "'master'"
+    },
+    "undotree": {
+      "rev": "0f1c981",
+      "src": "https://github.com/mbbill/undotree.git",
+      "version": "'master'"
+    }
+  }
+}

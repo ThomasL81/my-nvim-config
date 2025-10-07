@@ -1,4 +1,6 @@
 -- undotree.lua
-return {
-  'mbbill/undotree',
-}
+vim.pack.add({
+    { src = 'https://github.com/mbbill/undotree.git', version = 'master', },
+})
+
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle)

@@ -33,3 +33,7 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = vim.fn.stdpath('data') .. "/undodir"
 vim.opt.undofile = true
+vim.opt.winborder = 'rounded'
+vim.opt.completeopt = 'menuone,noselect,popup,preview'
+
+-- vim.cmd[[set completeopt+=menuone,noselect,popup,preview]]

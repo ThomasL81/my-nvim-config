@@ -1,5 +1,6 @@
 local alias=vim.keymap
 local normal_mode='n'
+local insert_mode='i'
 local visual_select_mode='v'
 local visual_mode='x'
 
@@ -7,16 +8,16 @@ alias.set(normal_mode, "j", "jzz")
 alias.set(normal_mode, "k", "kzz")
 alias.set(normal_mode, "G", "Gzz")
 alias.set(normal_mode, "<leader>pv", "<cmd>Explore<cr>") --function() vim.cmd([[Explore]]) end)
-alias.set(visual_select_mode, "J", ":m '>+1<CR>gv=gv") 
-alias.set(visual_select_mode, "K", ":m '<-2<CR>gv=gv") 
-alias.set(visual_mode, "<leader>p", "\"_dP") 
+alias.set(visual_select_mode, "J", ":m '>+1<CR>gv=gv")
+alias.set(visual_select_mode, "K", ":m '<-2<CR>gv=gv")
+alias.set(visual_mode, "<leader>p", "\"_dP")
 
 local silence_plugin_maps=false
 
 -- bufferline
 alias.set(normal_mode, "<c-[>", '<cmd>BufferLineCyclePrev<cr>', { silent = silence_plugin_maps })
-alias.set(normal_mode, "<c-]>", '<cmd>BufferLineCycleNext<cr>', { silent = silence_plugin_maps }) 
-alias.set(normal_mode, "<c-e>", '<cmd>bdelete<cr>', { silent = truesilence_plugin_maps }) 
+alias.set(normal_mode, "<c-]>", '<cmd>BufferLineCycleNext<cr>', { silent = silence_plugin_maps })
+alias.set(normal_mode, "<c-e>", '<cmd>bdelete<cr>', { silent = truesilence_plugin_maps })
 
 -- undotree
 alias.set(normal_mode, '<leader><F5>', '<cmd>UndotreeToggle<cr>', { silent = truesilence_plugin_maps })
@@ -37,3 +38,7 @@ alias.set(normal_mode, '<leader>dp', vim.diagnostic.goto_prev)
 alias.set(normal_mode, '<leader>dn', vim.diagnostic.goto_next)
 alias.set(normal_mode, '<leader>dl', "<cmd>Telescope diagnostics<cr>")
 alias.set(normal_mode, '<leader>q', vim.diagnostic.setloclist)
+
+alias.set(insert_mode, '<c-n>', function() vim.lsp.completion.get() end)
+
+

@@ -1,13 +1,3 @@
 -- theme.lua
-return {
-  'Shatur/neovim-ayu',
-  config = function() 
-    local ayu = require('ayu')
-    ayu.setup({
-      mirage=false,
-      terminal=true, 
-      overrides={}
-    })
-    ayu.colorscheme()
-  end
-}
+vim.pack.add({'https://github.com/Shatur/neovim-ayu.git'})
+vim.cmd[[colorscheme ayu-dark]]

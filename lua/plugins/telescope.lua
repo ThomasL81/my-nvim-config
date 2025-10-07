@@ -1,10 +1,8 @@
--- bufferline.lua
-return {
-  'nvim-telescope/telescope.nvim', 
-  tag = '0.1.8',
-  requires = { {'nvim-lua/plenary.nvim'} },
-  config = function() 
-    local ts = require('telescope')
-    ts.setup()
-  end
-}
+-- telescope.lua
+vim.pack.add({
+    { src = 'https://github.com/nvim-lua/plenary.nvim.git', version = 'master' },
+    { src = 'https://github.com/nvim-telescope/telescope.nvim.git', version = 'master' },
+})
+
+local ts = require('telescope')
+ts.setup()

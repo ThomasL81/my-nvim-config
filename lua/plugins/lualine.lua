@@ -1,10 +1,10 @@
--- lualine.lua
-return {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-  config = function() 
-    require('lualine').setup{
-      options = { theme = 'ayu_dark' }
-    }
-  end
+vim.pack.add({
+    { src = 'https://github.com/nvim-tree/nvim-web-devicons.git', version = 'master' },
+    { src = 'https://github.com/nvim-lualine/lualine.nvim.git', version = 'master' },
+})
+
+local ll = require('lualine')
+ll.setup{
+    options = { theme = 'ayu_dark' }
 }
+
