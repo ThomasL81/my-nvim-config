@@ -1,7 +1,7 @@
 -- treesitter.lua
 vim.pack.add({
     { src = 'https://github.com/nvim-treesitter/nvim-treesitter.git', version = 'master'}
-})
+}, { confirm = false })
 
 local ts = require('nvim-treesitter.configs')
 ts.setup{

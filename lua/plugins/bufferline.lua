@@ -1,7 +1,7 @@
 vim.pack.add({
     { src = 'https://github.com/nvim-tree/nvim-web-devicons.git', version = 'master' },
-    { src = 'https://github.com/akinsho/bufferline.nvim.git', version = 'master' },
-})
+    { src = 'https://github.com/akinsho/bufferline.nvim.git', version = 'main' },
+}, { confirm = false })
 
 local bl = require('bufferline')
 bl.setup{
