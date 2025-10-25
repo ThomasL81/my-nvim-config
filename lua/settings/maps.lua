@@ -22,16 +22,15 @@ alias.set(normal_mode, "<c-e>", '<cmd>bdelete<cr>', { silent = truesilence_plugi
 -- undotree
 alias.set(normal_mode, '<leader><F5>', '<cmd>UndotreeToggle<cr>', { silent = truesilence_plugin_maps })
 
--- telescope
-local telescope_ok, builtin = pcall(require, 'telescope.builtin')
-if telescope_ok then
-  alias.set(normal_mode, '<leader>ff', builtin.find_files, {})
-  alias.set(normal_mode, '<leader>fb', builtin.buffers, {})
-  alias.set(normal_mode, '<leader>fg', builtin.git_files, {})
-  alias.set(normal_mode, '<leader>fh', builtin.help_tags, {})
-  alias.set(normal_mode, '<leader>fw', builtin.lsp_workspace_symbols, {}) --builtin.lsp_dynamic_workspace_symbols, {})
-  alias.set(normal_mode, '<leader>fs', builtin.live_grep, {})
-end
+-- -- telescope
+-- local ts = require('telescope')
+-- local builtin = ts.builtin
+-- alias.set(normal_mode, '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
+-- alias.set(normal_mode, '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
+-- alias.set(normal_mode, '<leader>fg', builtin.git_files, { desc = 'Telescope git files' })
+-- alias.set(normal_mode, '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+-- alias.set(normal_mode, '<leader>fw', builtin.lsp_workspace_symbols, {}) --builtin.lsp_dynamic_workspace_symbols, {})
+-- alias.set(normal_mode, '<leader>fs', builtin.live_grep, { desc = 'Telescope live grep' })
 
 alias.set(normal_mode, '<leader>e', vim.diagnostic.open_float)
 alias.set(normal_mode, '<leader>dp', vim.diagnostic.goto_prev)

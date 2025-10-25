@@ -1,8 +1,9 @@
 {
   "plugins": {
     "bufferline.nvim": {
+      "rev": "655133c",
       "src": "https://github.com/akinsho/bufferline.nvim.git",
-      "version": "'master'"
+      "version": "'main'"
     },
     "lualine.nvim": {
       "rev": "b8c2315",
