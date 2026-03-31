@@ -40,4 +40,3 @@ alias.set(normal_mode, '<leader>q', vim.diagnostic.setloclist)
 
 alias.set(insert_mode, '<c-n>', function() vim.lsp.completion.get() end)
 
-
