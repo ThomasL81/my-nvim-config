@@ -37,3 +37,20 @@ vim.opt.winborder = 'rounded'
 vim.opt.completeopt = 'menuone,noselect,popup,preview'
 
 -- vim.cmd[[set completeopt+=menuone,noselect,popup,preview]]
+
+local virt_lines_ns = vim.api.nvim_create_namespace 'on_diagnostic_jump'
+
+--- @param diagnostic? vim.Diagnostic
+--- @param bufnr integer
+local function on_jump(diagnostic, bufnr)
+    if not diagnostic then return end
+
+    vim.diagnostic.show(
+        virt_lines_ns,
+        bufnr,
+        { diagnostic },
+        { virtual_lines = { current_line = true }, virtual_text = false }
+    )
+end
+
+vim.diagnostic.config({ jump = { on_jump = on_jump } })

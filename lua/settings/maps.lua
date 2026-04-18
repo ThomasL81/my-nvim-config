@@ -33,8 +33,6 @@ alias.set(normal_mode, '<leader><F5>', '<cmd>UndotreeToggle<cr>', { silent = tru
 -- alias.set(normal_mode, '<leader>fs', builtin.live_grep, { desc = 'Telescope live grep' })
 
 alias.set(normal_mode, '<leader>e', vim.diagnostic.open_float)
-alias.set(normal_mode, '<leader>dp', vim.diagnostic.goto_prev)
-alias.set(normal_mode, '<leader>dn', vim.diagnostic.goto_next)
 alias.set(normal_mode, '<leader>dl', "<cmd>Telescope diagnostics<cr>")
 alias.set(normal_mode, '<leader>q', vim.diagnostic.setloclist)
 
